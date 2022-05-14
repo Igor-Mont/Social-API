@@ -3,6 +3,9 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": [
+    "swagger.json"
+  ],
   "rules": {
     "@typescript-eslint/strict-boolean-expressions": "off"
   }

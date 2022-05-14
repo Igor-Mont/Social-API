@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Social API Documentation",
+    "description": "This is an API Rest",
+    "version": "1.0.0",
+    "contact": {
+      "email": "igormontcode@gmail.com"
+    }
+  }
+}
