@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  social_db:
+    image: postgres
+    container_name: social_db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=social
+      - POSTGRES_DB=social
+    volumes:
+      - pgdata:/data/postgres
+  app:
+    build: .
+    container_name: social
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app
+    links:
+      - social_db
+    depends_on:
+      - social_db
+
+volumes:
+  pgdata:
+    driver: local
